@@ -6,7 +6,7 @@
 
 ## Exemplo da aplicação rodando
 
-[![login](https://i.imgur.com/hk3wPNx.gif "login")](https://i.imgur.com/hk3wPNx.gif "login")
+[](https://i.imgur.com/hk3wPNx.gif "login")
 
 1 - Caso o servidor não esteja no ar, ao tentar realizar o login, será apresentada uma mensagem de erro no navegador.
 
