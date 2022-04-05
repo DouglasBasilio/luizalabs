@@ -6,13 +6,15 @@
 
 ## Exemplo da aplicação rodando
 
-![login](https://i.imgur.com/hk3wPNx.gif)
+![Gif login](https://i.imgur.com/8LUwt2U.gif)
 
 1 - Caso o servidor não esteja no ar, ao tentar realizar o login, será apresentada uma mensagem de erro no navegador.
 
 2 - Caso o usuário e senha não seja o correto, os campos do formulário serão destacados em vermelho.
 
 3 - Caso o login esteja correto, será direcionado para uma tela de Bem Vindo.
+
+Obs.: O usuário é **magalu** e a senha é **m@galu123** .
 
 ## Instruções
 
