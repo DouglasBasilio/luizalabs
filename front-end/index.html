@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luizalabs | Login</title>
+
+    <script src="https://kit.fontawesome.com/fa05a7bcd3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="assets/img/icon.webp" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content">
+            <div class="logo">
+                <img src="assets/img/logo.webp" alt="Logo">
+            </div>
+
+            <div class="image"></div>
+
+            <div class="text">
+                Somos a área de tecnologia <br>
+                e inovação do Magalu !
+            </div>
+        </div>
+
+        <form action="welcome.html" id="form" method="get">
+
+            <div class="logoForm">
+                <img src="assets/img/logo_form.webp" alt="Logo formulário">
+            </div>
+            <h3 class="title">Login</h3>
+            <div class="loading">
+                <img src="assets/img/loading.gif" width="20" class="spinner hidden" id="spinner">
+            </div>
+
+            <!-- Login -->
+            <div class="login">
+                <div>
+                    <label for="username">Usuário</label>
+                    <i class="fas fa-user"></i>
+
+                    <input type="text" name="username" id="username" placeholder="login" />
+
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+
+                    <div class="error"></div>
+
+                </div>
+
+                <!-- Senha -->
+                <div>
+                    <label for="password">Senha</label>
+                    <i class="fas fa-lock"></i>
+
+                    <input type="password" name="password" id="password" placeholder="senha" />
+
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+
+                    <div class="error"></div>
+                </div>
+
+                <button id="btn">Entrar</button>
+
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

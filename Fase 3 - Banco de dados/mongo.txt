@@ -1,0 +1,61 @@
+db_magalu
+
+tb_product
+
+[
+{
+  "id":1,
+  "name":"Headphone Philco",
+  "price":100.52
+},
+ {
+  "id":2,
+  "name":"Monitor LG",
+  "price":754.62
+},
+{
+  "id":3,
+  "name":"Mouse Optico",
+  "price":59.99
+}
+]
+
+tb_category
+
+[
+  {
+  "id":1,
+  "name":"Monitores"  
+  },
+  {
+  "id":2,
+  "name":"Periféricos"  
+  },
+  {
+  "id":3,
+  "name":"Headset Gamer"  
+  }
+]
+
+tb_product_category
+
+[
+ {
+    "id":1,
+    "productId":2,
+    "categoryId":1    
+ } ,
+{
+    "id":2,
+    "productId":3,
+    "categoryId":2    
+ } ,
+ {
+    "id":3,
+    "productId":1,
+    "categoryId":3    
+ } 
+]
+
+Filter tb_product
+{"price" : {$gt: 100}}

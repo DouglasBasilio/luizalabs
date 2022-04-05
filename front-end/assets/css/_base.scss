@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: $color-bg;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgb(0, 141, 255);
+    background: linear-gradient(
+        36deg,
+        rgba(0, 141, 255, 1) 1%,
+        rgba(0, 187, 255, 1) 35%,
+        rgba(0, 208, 255, 0.99) 75%
+    );
+    width: 55%;
+    min-height: 100vh;
+    padding: 10px 20px;
+
+    .image {
+        background-image: url("../img/illustration.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 60%;
+    }
+
+    .text {
+        text-align: center;
+        color: white;
+        font-size: 18px;
+    }
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(0, 141, 255);
+    background: linear-gradient(36deg, rgba(0, 141, 255, 1) 1%, rgba(0, 187, 255, 1) 35%, rgba(0, 208, 255, 0.99) 75%);
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px 20px;
+
+    h1 {
+        color: #fff;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        img {
+            width: 15%;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+/*criando banco de dados*/
+CREATE SCHEMA `db_magalu` ;
+
+/*criando tabela de produto*/
+CREATE TABLE `db_magalu`.`tb_product` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(50) NOT NULL,
+  `price` FLOAT NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+/*criando tabela de categoria*/
+CREATE TABLE `db_magalu`.`tb_category` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+
+/*criando tabela produto_categoria*/
+CREATE TABLE `db_magalu`.`tb_product_category` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `productId` INT NOT NULL,
+  `categoryId` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_productId_idx` (`productId` ASC) VISIBLE,
+  INDEX `fk_categoryId_idx` (`categoryId` ASC) VISIBLE,
+  CONSTRAINT `fk_productId`
+    FOREIGN KEY (`productId`)
+    REFERENCES `db_magalu`.`tb_product` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_categoryId`
+    FOREIGN KEY (`categoryId`)
+    REFERENCES `db_magalu`.`tb_category` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+
+/*INSERTS*/
+insert into tb_product (name, price) values ('Headphone Philco', 100.52);
+insert into tb_product (name, price) values ('Monitor LG', 754.62);
+insert into tb_product (name, price) values ('Mouse Optico', 59.99);
+
+insert into tb_category (name) values ('Monitores');
+insert into tb_category (name) values ('Periféricos');
+insert into tb_category (name) values ('Headset Gamer');
+
+insert into tb_product_category (productId, categoryId) values (2, 1);
+insert into tb_product_category (productId, categoryId) values (3, 2);
+insert into tb_product_category (productId, categoryId) values (1, 3);
+
+/*
+select * from tb_product_category pc
+inner join tb_product p on pc.productId = p.id
+inner join tb_category c on pc.categoryId = c.id;
+*/
+
+/*SELECT*/
+select * from tb_product where price >= 100.00;
+
+/*UPDATE*/
+update tb_product set name = 'Headset Philco' where id = 1;
+
+/*DELETE*/
+delete from tb_product_category as pc
+where pc.productId = 3;
+
+/*para que o delete abaixo funcione, é necessário excluir primeiro o registro da tabela 'tb_product_category' visto que contém uma FK*/
+delete from tb_product as p
+where p.id=3
